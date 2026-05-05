@@ -2,19 +2,18 @@
 
 <img src="https://raw.githubusercontent.com/Devopstrio/.github/main/assets/Browser_logo.png" height="150" alt="LLM Cost Optimizer Logo" />
 
-<h1>LLM Cost Optimizer Platform</h1>
+<h1>LLM Cost Optimizer</h1>
 
-<p><strong>The Institutional-Grade Platform for AI FinOps, Token Usage Analytics, and Strategic LLM Cost Optimization</strong></p>
+<p><strong>The Institutional-Grade Platform for AI FinOps, Token Usage Analytics, and Strategic LLM Cost Optimization.</strong></p>
 
-[![Standard: AI--FinOps](https://img.shields.io/badge/Standard-AI--FinOps-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Optimization: Token--Efficiency](https://img.shields.io/badge/Optimization-Token--Efficiency-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Governance: Budget--Enforcement](https://img.shields.io/badge/Governance-Budget--Enforcement-amber.svg?style=for-the-badge&labelColor=000000)]()
+[![Standard: AI-FinOps-Excellence](https://img.shields.io/badge/Standard-AI--FinOps--Excellence-indigo.svg?style=for-the-badge&labelColor=000000)]()
+[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Focus: Token--Efficiency](https://img.shields.io/badge/Focus-Token--Efficiency-blue.svg?style=for-the-badge&labelColor=000000)]()
 
 <br/>
 
 > **"Unmanaged AI spend is the silent killer of institutional margins."** 
-> LLM Cost Optimizer is a flagship solution for modern AI Platform teams and FinOps leaders. By orchestrating real-time token tracking, model-routing optimization, and automated budget enforcement, it enables enterprises to maximize the value of their Large Language Model investments while maintaining strict financial governance.
+> **LLM Cost Optimizer** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global AI operations. It orchestrates the complex lifecycle of LLM costs—from token-level attribution and semantic caching to intelligent model routing and unified AI FinOps governance.
 
 </div>
 
@@ -22,627 +21,265 @@
 
 ## 🏛️ Executive Summary
 
-The **LLM Cost Optimizer Platform** is a specialized flagship solution designed for AI Leaders, ML Engineers, and FinOps Organizations. As enterprise adoption of LLMs explodes, organizations face unpredictable and often exponential growth in API costs. This platform addresses the complexity of monitoring, analyzing, and optimizing LLM usage—across OpenAI, Anthropic, Google, and more—using a data-driven, automated framework.
+Unmanaged AI API spending and inefficient prompt engineering are strategic operational liabilities; lack of centralized AI cost orchestration is a primary barrier to organizational AI scaling. Organizations fail to achieve rapid AI ROI not because of a lack of models, but because of fragmented usage standards, lack of automated token optimization, and an inability to orchestrate AI spend with operational precision.
 
-This platform provides a **Unified AI FinOps Plane**. It demonstrates how to orchestrate institutional AI usage—using **FastAPI**, **React 18**, and **Cost-Aware Routing Patterns**—to create a "Cost-Efficient" AI culture. By providing **Token-Level Tracking**, **Model Price-Performance Mapping**, and **Automated Prompt Optimization**, it enables organizations to move from "Blind Spending" to "AI Value Maximization."
-
----
-
-## 📉 The "AI Spend" Problem
-
-Enterprises scaling Large Language Models face existential challenges:
-- **Token Invisibility**: Fragmented visibility into which applications, users, or prompts are consuming the most tokens, leading to "Budget Surprises."
-- **Suboptimal Model Selection**: Over-utilization of "Frontier" models (e.g. GPT-4) for simple tasks that could be handled by "Economy" models (e.g. GPT-3.5 or Claude 3 Haiku).
-- **Prompt Fragility**: Inefficiently long prompts or redundant requests that lead to unnecessary token consumption and higher latency.
-- **Budget Leakage**: Lack of real-time rate limiting, budget enforcement, and anomaly detection for rogue AI applications.
+This platform provides the **AI FinOps Intelligence Plane**. It implements a complete **Enterprise AI-as-Code Framework**, enabling AI and Finance teams to manage global LLM investments as first-class citizens. By automating the identification of redundant prompts through semantic caching and orchestrating real-time model routing based on task complexity, we ensure that every organizational interaction—from simple customer support chats to complex document analysis—is cost-optimized by default, audited for history, and strictly aligned with institutional AI frugality frameworks.
 
 ---
 
-## 🚀 Strategic Drivers & Business Outcomes
+## 📐 Architecture Storytelling: Principal Reference Models
 
-### 🎯 Strategic Drivers
-- **AI FinOps Maturity**: Moving from ad-hoc usage tracking to a centralized, automated cost governance framework.
-- **Cost-Aware Model Routing**: Dynamically selecting the most cost-effective model based on task complexity, latency requirements, and cost-per-token.
-- **Prompt Engineering Efficiency**: Automating prompt compression and caching to reduce total input token volume.
+### 1. Principal Architecture: Global LLM Cost Optimization & Intelligence Plane
+This diagram illustrates the end-to-end flow from multi-model request ingestion and token tracking to semantic caching, intelligent routing, and institutional AI auditing.
 
-### 💰 Business Outcomes
-- **Up to 60% Reduction in LLM Costs**: Through intelligent model routing, prompt optimization, and caching strategies.
-- **100% Attribution Accuracy**: Providing clear showback/chargeback models for every business unit using AI services.
-- **Institutional Predictability**: Using AI-driven forecasting to plan and budget for future AI scaling with confidence.
+```mermaid
+graph LR
+    %% Subgraph Definitions
+    subgraph RequestIngress["AI Request & Token Ingress"]
+        direction TB
+        OpenAI_Req["OpenAI / Azure Requests"]
+        Anthropic_Req["Anthropic / Claude Requests"]
+        LocalModel_Req["Local LLM (Ollama/vLLM)"]
+    end
+
+    subgraph IntelligenceEngine["AI FinOps Intelligence Hub"]
+        direction TB
+        API["FastAPI Optimizer Gateway"]
+        SemanticCache["Semantic Prompt Cache"]
+        RoutingEngine["Token-Aware Model Router"]
+        BudgetEnforcer["Budget & Quota Enforcer"]
+    end
+
+    subgraph ExecutionPlane["Distributed AI Execution Fleet"]
+        direction TB
+        ProxyWorkers["SDK / Proxy Workers"]
+        GPUClusters["Private GPU Compute Nodes"]
+        TokenFeed["Real-Time Token Aggregator"]
+    end
+
+    subgraph OperationsHub["Institutional AI FinOps Hub"]
+        direction TB
+        Scorecard["AI Frugality Score"]
+        Analytics["Token & Spend Stats"]
+        Audit["Forensic AI Metadata Lake"]
+    end
+
+    subgraph DevOps["Optimizer-as-Code Framework"]
+        direction TB
+        TF["Terraform AI Modules"]
+        Compression["Prompt Compression Bot"]
+        ChatOps["Spend Approval Hub"]
+    end
+
+    %% Flow Arrows
+    RequestIngress -->|1. Submit Request| API
+    API -->|2. Check Cache| SemanticCache
+    SemanticCache -->|3. Cache Miss| RoutingEngine
+    RoutingEngine -->|4. Check Quota| BudgetEnforcer
+    
+    BudgetEnforcer -->|5. Execute Call| ExecutionPlane
+    ExecutionPlane -->|6. Notify Usage| ChatOps
+    API -->|7. Visualize ROI| Scorecard
+    
+    Scorecard -->|8. Track Tokens| Analytics
+    Scorecard -->|9. Record Prompt| Audit
+    
+    TF -->|10. Provision Hub| IntelligenceEngine
+    Compression -->|11. Inject Optimized Prompt| RoutingEngine
+    Audit -->|12. Improve Caching| SemanticCache
+
+    %% Styling
+    classDef ingress fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#e8eaf6,stroke:#1a237e,stroke-width:2px;
+    classDef execution fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ops fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef devops fill:#fffde7,stroke:#f57f17,stroke-width:2px;
+
+    class RequestIngress ingress;
+    class IntelligenceEngine intel;
+    class ExecutionPlane execution;
+    class OperationsHub ops;
+    class DevOps devops;
+```
+
+### 2. The LLM Cost Lifecycle Flow
+The continuous path of an AI request from initial tracking and token analysis to active optimization, ROI reporting, and institutional forensic auditing.
+
+```mermaid
+graph LR
+    Track["Track Usage"] --> Analyze["Analyze Tokens"]
+    Analyze --> Optimize["Optimize Route"]
+    Optimize --> Report["Report ROI"]
+    Report --> Audit["Forensic Audit"]
+```
+
+### 3. Token-Aware Routing & Model Selection Topology
+Strategically routing requests to the most cost-effective model based on task complexity—sending simple summaries to "Flash" models while reserving high-tier "Frontier" models for complex reasoning.
+
+```mermaid
+graph LR
+    Hub["Unified AI Router"] -->|Simple Task| Flash["Gemini Flash / GPT-4o-mini"]
+    Hub -->|Medium Task| Sonnet["Claude 3.5 Sonnet / GPT-4o"]
+    Hub -->|Complex Task| Opus["Claude 3 Opus / GPT-4 Turbo"]
+    Hub --- Logic["Cost-Performance Matcher"]
+```
+
+### 4. Semantic Caching & Prompt Reuse Flow
+Avoiding redundant and expensive LLM calls by caching similar prompt embeddings, enabling the platform to return previously generated high-quality responses for near-zero token cost.
+
+```mermaid
+graph TD
+    Prompt["New Prompt"] --> Embed["Generate Embedding"]
+    Embed --> VectorDB["Vector DB Similarity Search"]
+    VectorDB -->|Hit| Response["Return Cached Result"]
+    VectorDB -->|Miss| Call["Execute LLM API"]
+    Call --- Store["Update Semantic Cache"]
+```
+
+### 5. Multi-Model Batching & Throughput Optimization Flow
+Grouping non-critical AI requests into batches to maximize GPU utilization and leverage lower-cost batch-processing tiers provided by major LLM providers.
+
+```mermaid
+graph LR
+    UserA["Request A"] --> Buffer["Request Batcher"]
+    UserB["Request B"] --> Buffer
+    UserC["Request C"] --> Buffer
+    Buffer -->|Execute Batch| Provider["LLM Provider (Batch Tier)"]
+    Provider --- Savings["40-50% Cost Reduction"]
+```
+
+### 6. Prompt Engineering Cost-Efficiency Flow
+Automatically shortening and compressing prompts by removing redundant context or filler words without losing semantic meaning, directly reducing the input token count.
+
+```mermaid
+graph LR
+    Raw["Raw Prompt (1k Tokens)"] --> Bot["Compression Bot"]
+    Bot -->|Summarize Context| Short["Optimized Prompt (400 Tokens)"]
+    Short --> Call["Execute LLM Call"]
+    Short --- Stats["60% Token Savings"]
+```
+
+### 7. Institutional AI Frugality Scorecard
+Grading organizational performance based on key indicators: Token Efficiency Ratio, Model Selection ROI, and Semantic Cache Hit Rate.
+
+```mermaid
+graph TD
+    Post["Frugality Health: 92%"] --> Risk["Waste Gap: 8%"]
+    Post --- C1["Cache Hit Rate (30%)"]
+    Post --- C2["Budget Compliance (100%)"]
+```
+
+### 8. Identity & RBAC for AI Spend Governance
+Managing fine-grained access to AI spend dashboards, routing policies, and prompt audit logs between AI Architects, FinOps Analysts, and Procurement Officers.
+
+```mermaid
+graph TD
+    Arch["AI Architect"] --> Hub["Manage Routing Policies"]
+    Analyst["FinOps Analyst"] --> Stats["Observe Token Spend"]
+    Procure["Procurement Officer"] --> Audit["Verify Vendor ROI"]
+```
+
+### 9. IaC Deployment: Optimizer-as-Code Framework
+Using modular Terraform to deploy and manage the versioned distribution of the AI tracking hubs, routing workers, and forensic metadata lakes.
+
+```mermaid
+graph LR
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Optimizer Control Plane"]
+    Engine --> Clusters["HA Proxy Fleet"]
+```
+
+### 10. AIOps LLM Spend Anomaly & Volume Spike Validation Flow
+Using advanced analytics to identify "Runaway Agents" or accidental infinite loops that could result in exponential token consumption and budget depletion.
+
+```mermaid
+graph LR
+    Usage["Token Velocity"] --> Analyzer["Anomaly Detection Bot"]
+    Analyzer -->|Runaway| Kill["Automated Request Containment"]
+    Analyzer -->|Normal| Pass["Status Operational"]
+```
+
+### 11. Metadata Lake for Forensic AI Audit
+Storing long-term records of every prompt, every token count, and every cost assumption for institutional record-keeping, compliance auditing, and post-spend forensics.
+
+```mermaid
+graph LR
+    Prompt["AI Interaction"] --> Stream["Forensic Stream"]
+    Stream --> Lake["AI Metadata Lake"]
+    Lake --> Trends["Token Consumption Trends"]
+```
 
 ---
 
-## 📐 Architecture Storytelling: 80+ Advanced Diagrams
-
-### 1. Executive AI Cost Architecture
-*The orchestration of Collectors, Engines, and Governance.*
-```mermaid
-graph TD
-    subgraph "LLM Cost Optimizer Platform"
-        Portal[AI FinOps Hub]
-        Collectors[Usage Collectors]
-        CostEngine[Cost Engine]
-        OptEngine[Optimization Engine]
-        GovEngine[Governance Engine]
-    end
-
-    subgraph "AI Providers"
-        OpenAI[OpenAI API]
-        Anthropic[Anthropic API]
-        Azure[Azure OpenAI]
-        Google[Gemini / Vertex]
-    end
-
-    subgraph "Infrastructure"
-        K8s[Kubernetes Workers]
-        Redis[Usage Queue]
-    end
-
-    Portal --> CostEngine
-    Collectors --> OpenAI
-    Collectors --> Anthropic
-    Collectors --> Azure
-    Collectors --> Google
-    Collectors --> Redis
-    Redis --> CostEngine
-    CostEngine --> OptEngine
-    OptEngine --> GovEngine
-    GovEngine --> Portal
-```
-
-### 2. Token Usage Ingestion Lifecycle
-*From API request to attributed cost record.*
-```mermaid
-sequenceDiagram
-    participant App as AI Application
-    participant Proxy as LLM Proxy / SDK
-    participant Queue as Redis Queue
-    participant Engine as Cost Engine
-    participant DB as Cost Ledger
-    participant UI as FinOps Hub
-
-    App->>Proxy: Execute LLM Request
-    Proxy-->>App: Return Response
-    Proxy->>Queue: Push Usage Metadata (Tokens, Model, AppID)
-    Queue->>Engine: Consume Usage Event
-    Engine->>Engine: Calculate Cost (Provider Rates)
-    Engine->>DB: Persist Attributed Usage Record
-    DB-->>UI: Real-time Usage Update
-```
-
-### 3. Model Routing Optimization Logic
-*Selecting the optimal model based on cost and capability.*
-```mermaid
-graph TD
-    Task[Incoming Task] --> Complexity{Complexity Score?}
-    Complexity -->|Low| Economy[Route to Economy: Gemini Flash]
-    Complexity -->|Medium| Mid[Route to Mid-Tier: Claude 3 Sonnet]
-    Complexity -->|High| Frontier[Route to Frontier: GPT-4o]
-    Economy --> Cost[Lowest Cost]
-    Mid --> Cost
-    Frontier --> Cost
-```
-
-### 4. Prompt Optimization Loop
-```mermaid
-graph LR
-    Raw[Raw Prompt] --> Compress[Prompt Compression Engine]
-    Compress --> Cache{In Cache?}
-    Cache -->|Yes| Hit[Return Cached Response]
-    Cache -->|No| Execute[Execute API Call]
-    Execute --> Store[Store in Response Cache]
-```
-
-### 5. Multi-Tenant Cost Allocation
-```mermaid
-graph TD
-    Total[Total AI Spend] --> BU1[Business Unit: Marketing]
-    Total --> BU2[Business Unit: Engineering]
-    Total --> BU3[Business Unit: Sales]
-    BU1 --> AppA[Content Bot]
-    BU1 --> AppB[Social Engine]
-```
-
-### 6. Budget Enforcement Flow
-```mermaid
-graph LR
-    Usage[Current Usage] --> Threshold{Exceeds Budget?}
-    Threshold -->|Yes| Alert[Critical Alert & Rate Limit]
-    Threshold -->|No| Allow[Continue Normal Operation]
-```
-
-### 7. Performance vs. Cost Tradeoff Analysis
-```mermaid
-graph LR
-    Model[Model X] --> Speed[Latency / Speed]
-    Model --> Cost[Cost per 1M Tokens]
-    Model --> Quality[Accuracy / Quality]
-    Speed --> Score[Efficiency Score]
-    Cost --> Score
-    Quality --> Score
-```
-
-### 8. AI Usage Forecasting Model
-```mermaid
-graph LR
-    History[Historical Usage] --> ML[Forecasting Engine]
-    ML --> Pred[Predicted Spend: Next 30 Days]
-    Pred --> Budget[Budget Realignment]
-```
-
-### 9. Token Efficiency KPI Loop
-```mermaid
-graph TD
-    Tokens[Total Tokens] --> Output[Output Value]
-    Output --> Ratio[Token Efficiency Ratio]
-    Ratio --> Opt[Optimization Task]
-```
-
-### 10. Cost Anomaly Detection
-```mermaid
-graph LR
-    Pattern[Baseline Pattern] --> Detect[Anomaly Detected]
-    Detect --> Rogue[Identify Rogue App / Script]
-    Rogue --> Contain[Automated Containment]
-```
-
-### 11. Multi-provider cost tracking
-```mermaid
-graph LR
-    P[Prov] --> C[Cost]
-```
-
-### 12. Token usage tracking
-```mermaid
-graph LR
-    T[Token] --> U[Usage]
-```
-
-### 13. Cost per request flow
-```mermaid
-graph LR
-    R[Req] --> C[Cost]
-```
-
-### 14. Model selection optimization
-```mermaid
-graph LR
-    M[Model] --> S[Select]
-```
-
-### 15. Prompt optimization flow
-```mermaid
-graph LR
-    P[Prom] --> O[Opt]
-```
-
-### 16. Caching strategy flow
-```mermaid
-graph LR
-    C[Cache] --> S[Strat]
-```
-
-### 17. Rate limiting flow
-```mermaid
-graph LR
-    R[Rate] --> L[Limit]
-```
-
-### 18. Budget enforcement flow
-```mermaid
-graph LR
-    B[Budg] --> E[Enfor]
-```
-
-### 19. Cost anomaly detection
-```mermaid
-graph LR
-    C[Cost] --> A[Anom]
-```
-
-### 20. Tradeoff analysis flow
-```mermaid
-graph LR
-    T[Trade] --> A[Analy]
-```
-
-### 21. Token efficiency scoring
-```mermaid
-graph LR
-    T[Token] --> E[Score]
-```
-
-### 22. Fine-tuning cost comparison
-```mermaid
-graph LR
-    F[Fine] --> C[Comp]
-```
-
-### 23. Batch vs real-time optimization
-```mermaid
-graph LR
-    B[Batch] --> R[Real]
-```
-
-### 24. Embedding cost tracking
-```mermaid
-graph LR
-    E[Embed] --> C[Cost]
-```
-
-### 25. Vector DB usage cost
-```mermaid
-graph LR
-    V[VDB] --> C[Cost]
-```
-
-### 26. Multi-tenant allocation
-```mermaid
-graph LR
-    M[Multi] --> A[Alloc]
-```
-
-### 27. Chargeback model flow
-```mermaid
-graph LR
-    C[Charg] --> M[Model]
-```
-
-### 28. Showback model flow
-```mermaid
-graph LR
-    S[Show] --> M[Model]
-```
-
-### 29. Governance policy flow
-```mermaid
-graph LR
-    G[Gov] --> P[Policy]
-```
-
-### 30. Executive AI dashboard
-```mermaid
-graph LR
-    E[Exec] --> D[Dash]
-```
-
-### 31. Usage analytics flow
-```mermaid
-graph LR
-    U[Usage] --> A[Analy]
-```
-
-### 32. Cost ingestion engine
-```mermaid
-graph LR
-    C[Cost] --> I[Inge]
-```
-
-### 33. Optimization engine flow
-```mermaid
-graph LR
-    O[Opti] --> E[Eng]
-```
-
-### 34. Analytics engine flow
-```mermaid
-graph LR
-    A[Analy] --> E[Eng]
-```
-
-### 35. Governance engine flow
-```mermaid
-graph LR
-    G[Gov] --> E[Eng]
-```
-
-### 36. OpenAI collector
-```mermaid
-graph LR
-    O[OAI] --> C[Coll]
-```
-
-### 37. Anthropic collector
-```mermaid
-graph LR
-    A[Anth] --> C[Coll]
-```
-
-### 38. Google AI collector
-```mermaid
-graph LR
-    G[GGL] --> C[Coll]
-```
-
-### 39. Azure collector
-```mermaid
-graph LR
-    A[Azure] --> C[Coll]
-```
-
-### 40. Cost forecasting model
-```mermaid
-graph LR
-    C[Cost] --> F[Fore]
-```
-
-### 41. Model comparison dashboard
-```mermaid
-graph LR
-    M[Model] --> C[Comp]
-```
-
-### 42. Budget tracking dashboard
-```mermaid
-graph LR
-    B[Budg] --> T[Track]
-```
-
-### 43. Token usage analytics
-```mermaid
-graph LR
-    T[Token] --> U[Usage]
-```
-
-### 44. Forecasting dashboard
-```mermaid
-graph LR
-    F[Fore] --> D[Dash]
-```
-
-### 45. Reporting engine flow
-```mermaid
-graph LR
-    R[Rep] --> E[Eng]
-```
-
-### 46. Integration: Vector DB
-```mermaid
-graph LR
-    I[Integ] --> V[VDB]
-```
-
-### 47. Integration: Cache
-```mermaid
-graph LR
-    I[Integ] --> C[Cache]
-```
-
-### 48. Integration: Billing
-```mermaid
-graph LR
-    I[Integ] --> B[Bill]
-```
-
-### 49. Infrastructure: Network
-```mermaid
-graph LR
-    I[Infra] --> N[Net]
-```
-
-### 50. Infrastructure: K8s
-```mermaid
-graph LR
-    I[Infra] --> K[K8s]
-```
-
-### 51. Infrastructure: Redis
-```mermaid
-graph LR
-    I[Infra] --> R[Redis]
-```
-
-### 52. Monitoring: Prometheus
-```mermaid
-graph LR
-    M[Mon] --> P[Prom]
-```
-
-### 53. Monitoring: Grafana
-```mermaid
-graph LR
-    M[Mon] --> G[Graf]
-```
-
-### 54. Monitoring: Alerts
-```mermaid
-graph LR
-    M[Mon] --> A[Alert]
-```
-
-### 55. CI/CD: Build pipeline
-```mermaid
-graph LR
-    C[CICD] --> B[Build]
-```
-
-### 56. CI/CD: Test pipeline
-```mermaid
-graph LR
-    C[CICD] --> T[Test]
-```
-
-### 57. CI/CD: Deploy pipeline
-```mermaid
-graph LR
-    C[CICD] --> D[Deploy]
-```
-
-### 58. Cost UI: Dashboard
-```mermaid
-graph LR
-    U[UI] --> D[Dash]
-```
-
-### 59. Cost UI: Optimization
-```mermaid
-graph LR
-    U[UI] --> O[Opt]
-```
-
-### 60. Cost UI: Governance
-```mermaid
-graph LR
-    U[UI] --> G[Gov]
-```
-
-### 61. API: Cost summary
-```mermaid
-graph LR
-    A[API] --> C[Cost]
-```
-
-### 62. API: Token usage
-```mermaid
-graph LR
-    A[API] --> T[Tok]
-```
-
-### 63. API: Comparison
-```mermaid
-graph LR
-    A[API] --> C[Comp]
-```
-
-### 64. API: Budget
-```mermaid
-graph LR
-    A[API] --> B[Budg]
-```
-
-### 65. Worker: Cost
-```mermaid
-graph LR
-    W[Worker] --> C[Cost]
-```
-
-### 66. Worker: Optimization
-```mermaid
-graph LR
-    W[Worker] --> O[Opt]
-```
-
-### 67. Worker: Forecast
-```mermaid
-graph LR
-    W[Worker] --> F[Fore]
-```
-
-### 68. Worker: Notify
-```mermaid
-graph LR
-    W[Worker] --> N[Notify]
-```
-
-### 69. Model routing topology
-```mermaid
-graph LR
-    M[Model] --> R[Route]
-```
-
-### 70. Prompt compression flow
-```mermaid
-graph LR
-    P[Prom] --> C[Comp]
-```
-
-### 71. Response cache flow
-```mermaid
-graph LR
-    R[Resp] --> C[Cache]
-```
-
-### 72. Budget threshold alert
-```mermaid
-graph LR
-    B[Budg] --> T[Thre]
-```
-
-### 73. Cost anomaly containment
-```mermaid
-graph LR
-    C[Cost] --> A[Anom]
-```
-
-### 74. Transformation roadmap
-```mermaid
-graph LR
-    T[Trans] --> R[Road]
-```
-
-### 75. Value realization model
-```mermaid
-graph LR
-    V[Val] --> R[Real]
-```
-
-### 76. Efficiency KPI loop
-```mermaid
-graph LR
-    E[Effi] --> K[KPI]
-```
-
-### 77. Evidence collection flow
-```mermaid
-graph LR
-    E[Evid] --> C[Coll]
-```
-
-### 78. Compliance audit trail
-```mermaid
-graph LR
-    C[Comp] --> A[Audit]
-```
-
-### 79. Strategy execution loop
-```mermaid
-graph LR
-    S[Strat] --> E[Exec]
-```
-
-### 80. AI FinOps ecosystem
-```mermaid
-graph LR
-    A[AI] --> E[Eco]
-```
+## 🏛️ Core AI FinOps Pillars
+
+1.  **Unified AI Spend Control**: Maximizing ROI by centralizing all LLM interactions through a single institutional plane.
+2.  **High-Efficiency Token Governance**: Eliminating waste through automated prompt compression and model-matching logic.
+3.  **Semantic Caching Resiliency**: Minimizing costs by reusing high-quality responses for frequent institutional queries.
+4.  **Zero-Waste Model Routing**: Protecting margins by ensuring every task is handled by the most cost-effective model.
+5.  **Autonomous AI Spend Protection**: Identifying and containing rogue AI applications before they deplete organizational budgets.
+6.  **Full AI Auditability**: Immutable recording of every prompt and token count for institutional forensics.
 
 ---
 
 ## 🛠️ Technical Stack & Implementation
 
-### Cost & Optimization Engine
-- **Processing**: Python 3.11+ / FastAPI / Pandas
-- **Logic**: Token-Level Attribution, Cost-Aware Model Routing, Prompt Compression.
-- **Backend**: PostgreSQL (Cost Ledger), Redis (Usage Queue).
+### Optimizer Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Routing Core**: Custom Python-based logic for task complexity scoring and model selection.
+*   **Caching Hub**: Redis with Vector Extensions (e.g. RedisVL) for high-performance semantic search.
+*   **Persistence**: PostgreSQL (Cost Ledger) and Redis (Usage Queue).
+*   **Auth Orchestrator**: Federated OIDC/SAML for least-privilege AI spend access.
 
-### Frontend (AI FinOps Hub)
-- **Framework**: React 18 / Vite
-- **Visuals**: Recharts (Token Velocity, Provider Breakdown, Savings Trends).
-- **Theme**: Indigo, Slate, and Amber (Institutional FinOps Aesthetics).
+### FinOps Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Dark, Indigo, Slate (Modern high-fidelity AI aesthetic).
+*   **Visualization**: D3.js for provider distribution maps and Recharts for token velocity analytics.
 
-### Infrastructure
-- **Cloud**: AWS EKS (Runtime), ElastiCache (Redis Queue).
-- **IaC**: Terraform (VPC, K8s, Redis, IAM).
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS).
+*   **Vector Plane**: Managed Vector DB (Pinecone/Milvus) for large-scale semantic caching.
+*   **IaC**: Modular Terraform for deploying the optimizer landing zone and proxy fleet.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/opt_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/proxies`** | SDK & API gateway fleet | K8s Deployment, Python |
+| **`infrastructure/cache`** | Semantic & Response cache | Redis, Vector DB |
+| **`infrastructure/auditing`** | Forensic AI sinks | S3, Athena, Quicksight |
 
 ---
 
 ## 🚀 Deployment Guide
 
-### Local Development
+### Local Principal Environment
 ```bash
-# Clone the repository
+# Clone the optimizer platform
 git clone https://github.com/devopstrio/llm-cost-optimizer.git
 cd llm-cost-optimizer
 
-# Setup environment
+# Configure environment
 cp .env.example .env
 
-# Launch services
-make up
+# Launch the Optimizer stack
+make init
+
+# Trigger a mock AI request and semantic caching simulation
+make simulate-optimization
 ```
+
 Access the AI FinOps Hub at `http://localhost:3000`.
 
 ---
 
 ## 📜 License
 Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
